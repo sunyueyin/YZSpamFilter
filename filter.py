@@ -184,14 +184,21 @@ if __name__ == '__main__':
         s = s.strip()
         stops.append(s)
 
-    query = '赚钱test宝妈tes日赚学生兼职*.@打字员'
+    #query = '赚钱test宝妈tes日赚学生兼职*.@打字员'
+    query = '看头像有福利'
+    query = '很高兴认识你'
     query = u(query)
     print query
     listquery = ClearAndSegment(query)
     #print listquery
     listquery = [word.encode('UTF-8') for word in listquery if word not in stops]
+    print listquery
 
-    if f.singlejudge(listquery) > threshold:
+    score = f.singlejudge(listquery)
+
+    print "score:",score
+  #  if f.singlejudge(listquery) > threshold:
+    if score > threshold:
         print 'WARNING: this is a spam message'
     else:
         print 'this message is harmless'

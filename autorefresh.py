@@ -52,7 +52,8 @@ if __name__ == '__main__':
         ##############################
         # 1.错误的将垃圾信息当做正常信息（漏抓取）
         ##############################
-        FalseAcceptstr = ['官网','诚招','手机','电脑','打字员','日入','百百']
+        #FalseAcceptstr = ['官网','诚招','手机','电脑','打字员','日入','百百']
+        FalseAcceptstr = ['美女','服务']
         f.Algorithm.cover(FalseAcceptstr, True)
         file = open(classify_model, 'wb')
         t = f.Algorithm.getmodel()

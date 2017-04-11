@@ -6,7 +6,7 @@ from flask.ext.restful import Api
 from config import configs
 import flask_restful.representations.json
 
-flask_restful.representations.json.settings['indent'] = 4
+#flask_restful.representations.json.settings['indent'] = 4
 
 app = Flask(__name__)
 api = Api(app)
